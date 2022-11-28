@@ -1,0 +1,25 @@
+$back-color: rgb(241, 241, 241);
+
+
+@mixin restaurants-cards {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 6px 6px 10px;
+    width: 95%;
+    margin: 20px 0px 20px 0px;
+
+    &__images {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        overflow: hidden;
+        height: 250px;
+        width: 100%;
+    }
+    
+    &__texts {
+        height: 80px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./sass/main.scss:./css/style.css -w",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaupouKevin/P3-OhMyFood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/MaupouKevin/P3-OhMyFood/issues"
+  },
+  "homepage": "https://github.com/MaupouKevin/P3-OhMyFood#readme",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}

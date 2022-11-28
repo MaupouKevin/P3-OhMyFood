@@ -1,0 +1,122 @@
+body {
+  font-family: "Roboto";
+}
+
+header, footer, main, .fonctionnement, .reservation-button, section, nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.images-logo {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.title-logo {
+  width: 40%;
+  margin: 15px 0px 10px 0px;
+}
+
+nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #d8d8d8;
+}
+
+.reservation-button {
+  background: rgb(241, 241, 241);
+}
+.reservation-button button {
+  height: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: -o-linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 25%;
+}
+
+.fonctionnement {
+  width: 100%;
+}
+.fonctionnement ul {
+  width: 100%;
+}
+.fonctionnement ul li {
+  width: 90%;
+  height: 100px;
+  border: none;
+  -webkit-box-shadow: 6px 6px 10px;
+          box-shadow: 6px 6px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.fonctionnement ul li:hover {
+  background-color: #FF79DA;
+}
+main {
+  background-color: rgb(241, 241, 241);
+}
+
+footer {
+  background: #8b8b8b;
+}
+
+#restaurants {
+  width: 100%;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 6px 6px 10px;
+          box-shadow: 6px 6px 10px;
+  width: 95%;
+  margin: 20px 0px 20px 0px;
+}
+.restaurants__images {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
+}
+.restaurants__texts {
+  height: 80px;
+  width: 100%;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc3R5bGUuY3NzIiwiLi4vLi4vc2Fzcy91dGlscy9fdmFyaWFibGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBSUE7RUFDSSxxQkFBQTtBQ0hKOztBRE1BO0VBQ0ksb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSx5QkFBQTtNQUFBLDZCQUFBO0VBQ0EseUJBQUE7TUFBQSxzQkFBQTtVQUFBLG1CQUFBO0VBQ0EsNEJBQUE7RUFBQSw2QkFBQTtNQUFBLDBCQUFBO1VBQUEsc0JBQUE7QUNISjs7QURNQTtFQUNJLFdBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0FDSEo7O0FETUE7RUFDSSxVQUFBO0VBQ0EseUJBQUE7QUNISjs7QURNQTtFQUVJLDhCQUFBO0VBQUEsNkJBQUE7TUFBQSx1QkFBQTtVQUFBLG1CQUFBO0VBQ0EsbUJBQUE7QUNKSjs7QURhQTtFQUVJLDhCRXZDUztBRDRCYjtBRGFJO0VBQ0ksWUFBQTtFQUNBLHVGQUFBO0VBQUEsZ0RBQUE7RUFBQSw2Q0FBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtBQ1hSOztBRGdCQTtFQUVJLFdBQUE7QUNkSjtBRGdCSTtFQUNJLFdBQUE7QUNkUjtBRGdCUTtFQUNJLFVBQUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGdDQUFBO1VBQUEsd0JBQUE7RUFDQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtBQ2RaO0FEaUJZO0VBQ0kseUJBQUE7QUNmaEI7QUQyQkE7RUFFSSxvQ0VsRlM7QUR3RGI7O0FEOEJBO0VBRUksbUJBQUE7QUM1Qko7O0FEK0JBO0VBQ0ksV0FBQTtBQzVCSjs7QUQrQkE7RUUzRkksb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxnQ0FBQTtVQUFBLHdCQUFBO0VBQ0EsVUFBQTtFQUNBLHlCQUFBO0FEZ0VKO0FDOURJO0VBQ0ksNEJBQUE7RUFDQSw2QkFBQTtFQUNBLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLFdBQUE7QURnRVI7QUM3REk7RUFDSSxZQUFBO0VBQ0EsV0FBQTtBRCtEUjs7QURjQTtFQUNJLFdBQUE7RUFDQSxZQUFBO0VBQ0Esb0JBQUE7S0FBQSxpQkFBQTtBQ1hKIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */

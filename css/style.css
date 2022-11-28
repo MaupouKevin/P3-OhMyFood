@@ -1,0 +1,110 @@
+body {
+  font-family: "Roboto";
+}
+
+header, footer, main, .fonctionnement, .reservation-button, section, nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.images-logo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.title-logo {
+  width: 40%;
+  margin: 15px 0px 10px 0px;
+}
+
+nav {
+  flex-direction: row;
+  background: #d8d8d8;
+}
+
+.reservation-button {
+  background: rgb(241, 241, 241);
+}
+.reservation-button button {
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 25%;
+}
+
+.fonctionnement {
+  width: 100%;
+}
+.fonctionnement div {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+.fonctionnement div p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: small;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+}
+.fonctionnement div button {
+  width: 95%;
+  height: 100px;
+  padding-right: 50px;
+  border: none;
+  box-shadow: 6px 6px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+.fonctionnement div button:hover {
+  background-color: #FF79DA;
+}
+
+main {
+  background-color: rgb(241, 241, 241);
+}
+
+footer {
+  background: #8b8b8b;
+}
+
+#restaurants {
+  width: 100%;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 6px 6px 10px;
+  width: 95%;
+  margin: 20px 0px 20px 0px;
+}
+.restaurants__images {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
+}
+.restaurants__texts {
+  height: 80px;
+  width: 100%;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
