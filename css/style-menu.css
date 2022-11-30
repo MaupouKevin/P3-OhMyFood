@@ -1,0 +1,72 @@
+body {
+  font-family: "Roboto";
+  margin: 0px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .title-logo {
+  width: 40%;
+  margin: 15px 0px 10px 0px;
+}
+header .title-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .return-button {
+  position: relative;
+  left: -25%;
+}
+header .return-button i {
+  font-size: 15px;
+}
+
+.restaurant-picture {
+  width: 100%;
+  height: 320px;
+}
+.restaurant-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  bottom: 0px;
+}
+
+.restaurant-block {
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: rgb(241, 241, 241);
+  position: relative;
+  bottom: 50px;
+}
+.restaurant-block .starters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.restaurant-block .starters .block {
+  width: 90%;
+  height: 100px;
+  border-radius: 15px;
+  padding-right: 50px;
+  border: none;
+  box-shadow: #d8d8d8 6px 6px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(241, 241, 241);
+  font-weight: 600;
+  flex-direction: column;
+  background-color: white;
+  height: fit-content;
+}
+
+/*# sourceMappingURL=style-menu.css.map */

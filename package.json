@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass ./sass/main.scss:./css/style.css -w",
+    "sass": "sass ./sass/main.scss:./css/style.css ./sass/menu.scss:./css/style-menu.css -w",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {

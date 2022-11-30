@@ -1,79 +1,117 @@
 body {
   font-family: "Roboto";
+  margin: 0px;
 }
 
-header, footer, main, .fonctionnement, .reservation-button, section, nav {
+header, footer, main, .fonctionnement, .reservation-text, .reservation-title, .reservation-block, section, nav {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 
-.images-logo {
+.title-logo {
+  width: 45%;
+  margin: 15px 0px 10px 0px;
+}
+.title-logo img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.title-logo {
-  width: 40%;
-  margin: 15px 0px 10px 0px;
-}
-
 nav {
+  height: 50px;
   flex-direction: row;
+  justify-content: space-around;
   background: #d8d8d8;
 }
-
-.reservation-button {
-  background: rgb(241, 241, 241);
+nav input {
+  width: 150px;
+  background: #d8d8d8;
+  border: none;
+  text-align: center;
 }
-.reservation-button button {
-  height: 50px;
+
+.reservation-block {
+  width: 100%;
+  background: rgb(241, 241, 241);
+  padding: 20px 0px 20px 0px;
+}
+.reservation-block h2 {
+  font-size: 30px;
+  margin: 0px;
+}
+.reservation-block p {
+  margin: 0px;
+  font-size: 20px;
+}
+.reservation-block button {
+  width: 250px;
+  height: 60px;
+  font-size: 15px;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
-  border-radius: 25%;
+  border-radius: 30px;
+  margin: 30px 0px 40px 0px;
+}
+.reservation-block button a {
+  padding: 21px;
+  color: white;
+  text-decoration: none;
+}
+
+.reservation-title {
+  margin: 30px 0px 10px 0px;
+}
+
+.reservation-text {
+  margin: 10px 0px 10px 0px;
 }
 
 .fonctionnement {
   width: 100%;
 }
+.fonctionnement h2 {
+  align-self: flex-start;
+}
 .fonctionnement div {
   width: 90%;
   display: flex;
   align-items: center;
+  padding-bottom: 15px;
 }
 .fonctionnement div p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
-  font-size: small;
+  width: 25px;
+  height: 25px;
+  font-size: medium;
   color: white;
   background-color: #9356DC;
-  border-radius: 50%;
+  border-radius: 25px;
+  position: relative;
+  right: -13px;
 }
 .fonctionnement div button {
-  width: 95%;
+  width: 90%;
   height: 100px;
+  border-radius: 15px;
   padding-right: 50px;
   border: none;
-  box-shadow: 6px 6px 10px;
+  box-shadow: #d8d8d8 6px 6px 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: rgb(241, 241, 241);
+  font-weight: 600;
 }
 .fonctionnement div button:hover {
-  background-color: #FF79DA;
+  background-color: rgb(147, 86, 220);
 }
 
 main {
   background-color: rgb(241, 241, 241);
-}
-
-footer {
-  background: #8b8b8b;
 }
 
 #restaurants {
@@ -85,26 +123,87 @@ footer {
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 6px 6px 10px;
-  width: 95%;
+  box-shadow: #cbcbcb 6px 6px 10px;
+  width: 90%;
   margin: 20px 0px 20px 0px;
+}
+.restaurants a {
+  text-decoration: none;
 }
 .restaurants__images {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   overflow: hidden;
-  height: 250px;
+  height: 200px;
   width: 100%;
 }
-.restaurants__texts {
-  height: 80px;
-  width: 100%;
+.restaurants__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
 }
-
-.images {
+.restaurants__texts h3 {
+  color: black;
+  font-size: 22px;
+  margin: 15px 0px 5px 15px;
+}
+.restaurants__texts p {
+  color: black;
+  font-size: 20px;
+  margin: 5px 0px 15px 15px;
+}
+.restaurants__hearts {
+  display: flex;
+  align-self: center;
+  margin: 0px 15px 0px 0px;
+}
+.restaurants__hearts i {
+  font-size: 35px;
+  font-weight: 100;
+}
+.restaurants a {
+  text-decoration: none;
+}
+.restaurants a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+footer {
+  align-items: flex-start;
+  background: #727272;
+}
+footer ul {
+  padding: 0px;
+  margin: 20px;
+  list-style: none;
+}
+footer ul i {
+  color: white;
+  font-size: 18px;
+  width: 20px;
+  padding-right: 10px;
+}
+footer ul li {
+  margin: 8px 0px 8px 0px;
+  font-size: 18px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-logo {
+  width: 30%;
+  margin: 30px 0px 0px 20px;
+}
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: invert(1);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+@import "./utils/variables";
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title-logo {
+        width: 40%;
+        margin: 15px 0px 10px 0px;
+
+        img {
+            @include images;
+        }
+
+    }
+
+    .return-button {
+        position: relative;
+        left: -25%;
+
+        i {
+            font-size: 15px;
+
+        }
+    }
+
+}
+
+.restaurant-picture {
+    width: 100%;
+    height: 320px;
+
+    img {
+        @include images;
+        position: relative;
+        bottom: 0px;
+    }
+
+}
+
+.restaurant-block {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: $back-color;
+    position: relative;
+    bottom: 50px;
+
+    .starters {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .block {
+            @include block;
+            flex-direction: column;
+            background-color: white;
+            height: fit-content;
+        }
+    }
+}

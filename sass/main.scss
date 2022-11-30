@@ -1,89 +1,120 @@
 @import "./utils/variables";
 
-
-
-body {
-    font-family: 'Roboto';
-}
-
 header {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
 
-.images-logo {
-    width: 100%;
-    object-fit: cover;
-}
-
 .title-logo {
-    width: 40%;
+    width: 45%;
     margin: 15px 0px 10px 0px;
+
+    img {
+        @include images;
+    }
 }
 
 nav {
+    height: 50px;
     @extend header;
     flex-direction: row;
+    justify-content: space-around;
     background: darken($color: $back-color, $amount: 10%);
+
+    input {
+        width: 150px;
+        background: darken($color: $back-color, $amount: 10%);
+        border: none;
+        text-align: center;
+    }
 }
 
 section {
     @extend header;
+}
 
+.reservation-block {
+    width: 100%;
+    @extend header;
+    background: $back-color;
+    padding: 20px 0px 20px 0px;
+
+    h2 {
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    p {
+        margin: 0px;
+        font-size: 20px;
+    }
+
+    button {
+        width: 250px;
+        height: 60px;
+        font-size: 15px;
+        background: linear-gradient(#FF79DA, #9356DC);
+        border: none;
+        border-radius: 30px;
+        margin: 30px 0px 40px 0px;
+
+        a {
+            padding: 21px;
+            color: white;
+            text-decoration: none;
+        }
+
+    }
+}
+
+.reservation-title {
+    @extend header;
+    margin: 30px 0px 10px 0px;
 
 }
 
-.reservation-button {
+.reservation-text {
     @extend header;
-    background: $back-color;
-
-    button {
-        height: 50px;
-        background: linear-gradient(#FF79DA, #9356DC);
-        border: none;
-        border-radius: 25%;
-
-    }
+    margin: 10px 0px 10px 0px;
 }
 
 .fonctionnement {
     @extend header;
     width: 100%;
 
+    h2 {
+        align-self: flex-start;
+    }
+
     div {
         width: 90%;
         display: flex;
         align-items: center;
+        padding-bottom: 15px;
 
         p {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 20px;
-            height: 20px;
-            font-size: small;
+            width: 25px;
+            height: 25px;
+            font-size: medium;
             color: white;
             background-color: #9356DC;
-            border-radius: 50%;
+            border-radius: 25px;
+            position: relative;
+            right: -13px;
+
         }
 
         button {
-            width: 95%;
-            height: 100px;
-            padding-right: 50px;
-            border: none;
-            box-shadow: 6px 6px 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: white;
-
-
+            @include block;
             &:hover {
-                background-color: #FF79DA;
+                background-color: rgba(147, 86, 220);
             }
+
+
         }
     }
 }
@@ -94,21 +125,57 @@ main {
 
 }
 
-footer {
-    @extend header;
-    background: darken($color: $back-color, $amount: 40%);
-}
-
 #restaurants {
     width: 100%;
 }
 
 .restaurants {
     @include restaurants-cards;
+
+    a {
+        text-decoration: none;
+
+        img {
+            @include images;
+        }
+
+    }
 }
 
-.images {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+footer {
+    @extend header;
+    align-items: flex-start;
+    background: darken($color: $back-color, $amount: 50%);
+
+    ul {
+        padding: 0px;
+        margin: 20px;
+        list-style: none;
+
+        i {
+            color: white;
+            font-size: 18px;
+            width: 20px;
+            padding-right: 10px;
+        }
+
+        li {
+            margin: 8px 0px 8px 0px;
+            font-size: 18px;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.footer-logo {
+    width: 30%;
+    margin: 30px 0px 0px 20px;
+    img {
+        @include images;
+        filter: invert(1);
+    }
 }
