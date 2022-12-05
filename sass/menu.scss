@@ -1,5 +1,19 @@
 @import "./utils/variables";
 
+h1 {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Shrikhand';
+    font-size: 30px;
+    padding-top: 30px;
+    margin: 0px;
+
+    i {
+        font-size: 30px;
+        font-weight: 0;
+    }
+}
+
 header {
     width: 100%;
     display: flex;
@@ -40,6 +54,10 @@ header {
 
 }
 
+main {
+    background-color: $back-color;
+}
+
 .restaurant-block {
     display: flex;
     flex-direction: column;
@@ -48,16 +66,143 @@ header {
     background-color: $back-color;
     position: relative;
     bottom: 50px;
+    padding: 0px 20px 0px 20px;
 
     .starters {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .block {
-            @include block;
-            flex-direction: column;
-            background-color: white;
-            height: fit-content;
+        @include block-dishes;
+    }
+
+    .main-courses {
+        @include block-dishes;
+    }
+
+    .desserts {
+        @include block-dishes;
+    }
+}
+
+.block {
+    @include block;
+    background-color: white;
+    height: fit-content;
+    margin-top: 15px;
+    justify-content: space-between;
+    animation: appear-block 1700ms 200ms both;
+
+    &:active {
+
+        &:hover {
+            &>.check {
+                transform: scaleX(1);
+                width: 20%;
+            }
         }
+    }
+
+    .text-block {
+        display: flex;
+        padding: 15px;
+        justify-content: space-between;
+
+        .block-title {
+            flex-direction: column;
+
+
+            h3 {
+                @include text-block;
+                font-size: 20px;
+                font-weight: 800;
+                padding: 0px 0px 10px 0px;
+            }
+
+            p {
+                @include text-block;
+                font-weight: 400;
+
+            }
+        }
+
+        .price {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            span {
+                display: flex;
+                margin: 2px;
+
+            }
+        }
+    }
+
+    .check {
+        transform-origin: 100% 0%;
+        transform: scaleX(0);
+        transition: transform 500ms;
+        width: 0%;
+        height: 85px;
+        display: flex;
+        position: relative;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: #99E2D0;
+
+        i {
+            color: white;
+            font-size: 25px;
+        }
+    }
+
+}
+
+.order-button {
+    display: flex;
+    justify-content: center;
+
+    button {
+        @include btn-purple;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: darken($color: $back-color, $amount: 50%);
+
+    ul {
+        padding: 0px;
+        margin: 20px;
+        list-style: none;
+
+        i {
+            color: white;
+            font-size: 18px;
+            width: 20px;
+            padding-right: 10px;
+        }
+
+        li {
+            margin: 8px 0px 8px 0px;
+            font-size: 18px;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.footer-logo {
+    width: 30%;
+    margin: 30px 0px 0px 20px;
+
+    img {
+        @include images;
+        filter: invert(1);
     }
 }

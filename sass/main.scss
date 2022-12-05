@@ -1,9 +1,11 @@
 @import "./utils/variables";
+@import "./components/loading-spinner.scss";
 
 header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    animation: hidden-body 1500ms 3s both;
 }
 
 .title-logo {
@@ -51,19 +53,7 @@ section {
     }
 
     button {
-        width: 250px;
-        height: 60px;
-        font-size: 15px;
-        background: linear-gradient(#FF79DA, #9356DC);
-        border: none;
-        border-radius: 30px;
-        margin: 30px 0px 40px 0px;
-
-        a {
-            padding: 21px;
-            color: white;
-            text-decoration: none;
-        }
+        @include btn-purple;
 
     }
 }
@@ -110,8 +100,15 @@ section {
 
         button {
             @include block;
+            align-items: center;
+
             &:hover {
                 background-color: rgba(147, 86, 220);
+            }
+
+            i {
+                color: darken($color: $back-color, $amount: 50%);
+                margin: 0px 30px 0px 30px
             }
 
 

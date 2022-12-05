@@ -3,10 +3,70 @@ body {
   margin: 0px;
 }
 
+@keyframes appear-block {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-icone {
+  font-size: 4em;
+  margin-bottom: 50px;
+  color: #99E2D0;
+  animation: loader-rotate 1500ms both;
+  animation-iteration-count: 2;
+}
+
+@keyframes loader-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hidden-body {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header, footer, main, .fonctionnement, .reservation-text, .reservation-title, .reservation-block, section, nav {
   display: flex;
   align-items: center;
   flex-direction: column;
+  animation: hidden-body 1500ms 3s both;
 }
 
 .title-logo {
@@ -52,7 +112,7 @@ nav input {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   border-radius: 30px;
-  margin: 30px 0px 40px 0px;
+  margin: 0px 0px 40px 0px;
 }
 .reservation-block button a {
   padding: 21px;
@@ -95,19 +155,21 @@ nav input {
 }
 .fonctionnement div button {
   width: 90%;
-  height: 100px;
+  height: 85px;
   border-radius: 15px;
-  padding-right: 50px;
   border: none;
   box-shadow: #d8d8d8 6px 6px 10px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: rgb(241, 241, 241);
   font-weight: 600;
+  align-items: center;
 }
 .fonctionnement div button:hover {
   background-color: rgb(147, 86, 220);
+}
+.fonctionnement div button i {
+  color: #727272;
+  margin: 0px 30px 0px 30px;
 }
 
 main {
@@ -159,8 +221,9 @@ main {
   margin: 0px 15px 0px 0px;
 }
 .restaurants__hearts i {
+  color: linear-gradient(#FF79DA, #9356DC);
   font-size: 35px;
-  font-weight: 100;
+  font-weight: 700;
 }
 .restaurants a {
   text-decoration: none;

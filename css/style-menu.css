@@ -3,6 +3,39 @@ body {
   margin: 0px;
 }
 
+@keyframes appear-block {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1 {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Shrikhand";
+  font-size: 30px;
+  padding-top: 30px;
+  margin: 0px;
+}
+h1 i {
+  font-size: 30px;
+  font-weight: 0;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -38,6 +71,10 @@ header .return-button i {
   bottom: 0px;
 }
 
+main {
+  background-color: rgb(241, 241, 241);
+}
+
 .restaurant-block {
   display: flex;
   flex-direction: column;
@@ -46,27 +83,185 @@ header .return-button i {
   background-color: rgb(241, 241, 241);
   position: relative;
   bottom: 50px;
+  padding: 0px 20px 0px 20px;
 }
 .restaurant-block .starters {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
-.restaurant-block .starters .block {
+.restaurant-block .starters h2 {
+  width: 75px;
+  font-size: 30px;
+  font-weight: 300;
+  align-self: flex-start;
+  border-bottom: solid 5px #99E2D0;
+  padding-bottom: 10px;
+  margin: 10px 0px 10px 0px;
+}
+.restaurant-block .main-courses {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.restaurant-block .main-courses h2 {
+  width: 75px;
+  font-size: 30px;
+  font-weight: 300;
+  align-self: flex-start;
+  border-bottom: solid 5px #99E2D0;
+  padding-bottom: 10px;
+  margin: 10px 0px 10px 0px;
+}
+.restaurant-block .desserts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.restaurant-block .desserts h2 {
+  width: 75px;
+  font-size: 30px;
+  font-weight: 300;
+  align-self: flex-start;
+  border-bottom: solid 5px #99E2D0;
+  padding-bottom: 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+.block {
   width: 90%;
-  height: 100px;
+  height: 85px;
   border-radius: 15px;
-  padding-right: 50px;
   border: none;
   box-shadow: #d8d8d8 6px 6px 10px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: rgb(241, 241, 241);
   font-weight: 600;
-  flex-direction: column;
   background-color: white;
   height: fit-content;
+  margin-top: 15px;
+  justify-content: space-between;
+  animation: appear-block 1700ms 200ms both;
+}
+.block:active:hover > .check {
+  transform: scaleX(1);
+  width: 20%;
+}
+.block .text-block {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+.block .text-block .block-title {
+  flex-direction: column;
+}
+.block .text-block .block-title h3 {
+  display: flex;
+  margin: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 0px 0px 10px 0px;
+}
+.block .text-block .block-title p {
+  display: flex;
+  margin: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 400;
+}
+.block .text-block .price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.block .text-block .price span {
+  display: flex;
+  margin: 2px;
+}
+.block .check {
+  transform-origin: 100% 0%;
+  transform: scaleX(0);
+  transition: transform 500ms;
+  width: 0%;
+  height: 85px;
+  display: flex;
+  position: relative;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99E2D0;
+}
+.block .check i {
+  color: white;
+  font-size: 25px;
+}
+
+.order-button {
+  display: flex;
+  justify-content: center;
+}
+.order-button button {
+  width: 250px;
+  height: 60px;
+  font-size: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 30px;
+  margin: 0px 0px 40px 0px;
+}
+.order-button button a {
+  padding: 21px;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #727272;
+}
+footer ul {
+  padding: 0px;
+  margin: 20px;
+  list-style: none;
+}
+footer ul i {
+  color: white;
+  font-size: 18px;
+  width: 20px;
+  padding-right: 10px;
+}
+footer ul li {
+  margin: 8px 0px 8px 0px;
+  font-size: 18px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-logo {
+  width: 30%;
+  margin: 30px 0px 0px 20px;
+}
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: invert(1);
 }
 
 /*# sourceMappingURL=style-menu.css.map */

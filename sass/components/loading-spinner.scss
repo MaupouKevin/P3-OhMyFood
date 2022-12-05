@@ -1,0 +1,45 @@
+.loader{
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loader-icone{
+    font-size: 4em;
+    margin-bottom: 50px;
+    color: #99E2D0;
+    animation: loader-rotate 1500ms both;
+    animation-iteration-count: 2;
+  }
+
+  @keyframes loader-rotate{
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hidden-body {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
