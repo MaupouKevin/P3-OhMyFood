@@ -12,24 +12,31 @@
     font-size: 4em;
     margin-bottom: 50px;
     color: #99E2D0;
-    animation: loader-rotate 1500ms both;
-    animation-iteration-count: 2;
+    animation: loader 3000ms both;
   }
 
-  @keyframes loader-rotate{
-    to{
-      transform: rotate(360deg);
-    }
-  }
+ 
 
 @keyframes loader {
-    0% {
-        opacity: 1;
 
+    35% {
+      transform: rotate(360deg);
+      animation-timing-function: cubic-bezier(.53,0,.47,.90);
+      
+    }
+
+    70% {
+        transform: rotate(360deg);
+        animation-timing-function: cubic-bezier(.53,.15,.47,1);
+      
+    }
+
+    99% {
+      opacity: 1;
     }
 
     100% {
-        opacity: 0;
+      opacity: 0;
     }
 }
 

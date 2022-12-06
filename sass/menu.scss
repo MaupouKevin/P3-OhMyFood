@@ -87,7 +87,7 @@ main {
     height: fit-content;
     margin-top: 15px;
     justify-content: space-between;
-    animation: appear-block 1700ms 200ms both;
+    animation: appear-block 800ms 200ms both;
 
     &:active {
 
@@ -156,6 +156,31 @@ main {
         }
     }
 
+}
+
+.block2 {
+    animation-delay: 400ms;
+}
+.block3 {
+    animation-delay: 600ms;
+}
+.block4 {
+    animation-delay: 800ms;
+}
+.block5 {
+    animation-delay: 1000ms;
+}
+.block6 {
+    animation-delay: 1200ms;
+}
+.block7 {
+    animation-delay: 1400ms;
+}
+.block8 {
+    animation-delay: 1600ms;
+}
+.block9 {
+    animation-delay: 1800ms;
 }
 
 .order-button {
