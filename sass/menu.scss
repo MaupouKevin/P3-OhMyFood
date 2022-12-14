@@ -8,9 +8,11 @@ h1 {
     padding-top: 30px;
     margin: 0px;
 
-    i {
+    .fa-solid {
+        display: flex;
+        align-items: center;
         font-size: 30px;
-        font-weight: 0;
+        font-weight: 100;
     }
 }
 
@@ -70,14 +72,26 @@ main {
 
     .starters {
         @include block-dishes;
+
+        h2 {
+            animation: appear-block 800ms 200ms both;
+        }
     }
 
     .main-courses {
         @include block-dishes;
+
+        h2 {
+            animation: appear-block 800ms 1000ms both;
+        }
     }
 
     .desserts {
         @include block-dishes;
+        
+        h2 {
+            animation: appear-block 800ms 1800ms both;
+        }
     }
 }
 
@@ -86,63 +100,75 @@ main {
     background-color: white;
     height: fit-content;
     margin-top: 15px;
-    justify-content: space-between;
     animation: appear-block 800ms 200ms both;
+
+    .check {
+        transition: transform 500ms linear;
+        width: 20%;
+        i {
+            transition: transform 500ms linear;
+        }
+    }
 
     &:active {
 
-        &:hover {
-            &>.check {
-                transform: scaleX(1);
-                width: 20%;
+        &>.check {
+            transform: scaleX(1);
+
+            & > i {
+                transform: rotate(360deg);
             }
         }
+
+        & > .block-title {
+            animation: animation-ellipsis 500ms linear both;
+        }
+
+        & > .price {
+            animation: animation-price 500ms linear both paused;      
+        }
+
     }
 
-    .text-block {
+    .block-title {
+        width: calc(80%);
         display: flex;
-        padding: 15px;
-        justify-content: space-between;
+        flex-direction: column;
 
-        .block-title {
-            flex-direction: column;
-
-
-            h3 {
-                @include text-block;
-                font-size: 20px;
-                font-weight: 800;
-                padding: 0px 0px 10px 0px;
-            }
-
-            p {
-                @include text-block;
-                font-weight: 400;
-
-            }
+        h3 {
+            @include text-block;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 15px 0px 5px 15px
         }
 
-        .price {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-
-            span {
-                display: flex;
-                margin: 2px;
-
-            }
+        p {
+            @include text-block;
+            font-size: 17px;
+            font-weight: 300;
+            margin: 5px 0px 15px 15px
         }
     }
+
+    .price {
+        width: calc(15%);
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 15px;
+        justify-content: flex-end;
+
+        span {
+            display: flex;
+        }
+    }
+
 
     .check {
-        transform-origin: 100% 0%;
         transform: scaleX(0);
-        transition: transform 500ms;
-        width: 0%;
+        transform-origin: 100% 0%;
         height: 85px;
         display: flex;
-        position: relative;
+        position: absolute;
         right: 0;
         justify-content: center;
         align-items: center;
@@ -152,35 +178,16 @@ main {
 
         i {
             color: white;
-            font-size: 25px;
+            font-size: 30px;
         }
     }
 
 }
 
-.block2 {
-    animation-delay: 400ms;
-}
-.block3 {
-    animation-delay: 600ms;
-}
-.block4 {
-    animation-delay: 800ms;
-}
-.block5 {
-    animation-delay: 1000ms;
-}
-.block6 {
-    animation-delay: 1200ms;
-}
-.block7 {
-    animation-delay: 1400ms;
-}
-.block8 {
-    animation-delay: 1600ms;
-}
-.block9 {
-    animation-delay: 1800ms;
+@for $i from 2 through 10 {
+    .block#{$i} {
+        animation-delay: (200ms+200ms*$i) ;
+    }
 }
 
 .order-button {

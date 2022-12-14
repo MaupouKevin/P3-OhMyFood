@@ -2,10 +2,8 @@
 @import "./components/loading-spinner.scss";
 
 header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    animation: hidden-body 1500ms 3s both;
+    @include layout;
+    @include hidden-body;
 }
 
 .title-logo {
@@ -18,8 +16,9 @@ header {
 }
 
 nav {
+    @include layout;
+    @include hidden-body;
     height: 50px;
-    @extend header;
     flex-direction: row;
     justify-content: space-around;
     background: darken($color: $back-color, $amount: 10%);
@@ -39,13 +38,14 @@ nav {
 }
 
 section {
-    @extend header;
+    @include layout;
+    @include hidden-body;
 }
 
 .reservation-block {
     width: 100%;
     align-items: center;
-    @extend header;
+    @include layout;
     background: $back-color;
     padding: 20px 0px 20px 0px;
 
@@ -68,29 +68,32 @@ section {
 }
 
 .reservation-title {
-    @extend header;
+    @include layout;
     margin: 30px 40px 10px 40px;
 
 }
 
 .reservation-text {
-    @extend header;
+    @include layout;
     margin: 10px 20px 10px 20px;
 }
 
 .fonctionnement {
-    @extend header;
+    animation: hidden-body 1500ms 3s both;
     width: 100%;
 
     h2 {
+        display: flex;
         align-self: flex-start;
+        margin-left: 8%;
     }
 
     div {
-        width: 90%;
+        width: 94%;
         display: flex;
         align-items: center;
-        padding-bottom: 15px;
+        padding-bottom: 25px;
+        padding-left: 5px;
 
         p {
             display: flex;
@@ -121,20 +124,13 @@ section {
             }
 
             &:hover {
-
-                ::after {
-                    opacity: 0.6;
-                }
+                cursor: pointer;
+                background-color: lighten($color: #9356DC, $amount: 20%);
 
                 i {
                     color: darken($color: #9356DC, $amount: 20%);
                     margin: 0px 0px 0px 30px
                 }
-            }
-
-            &::after {
-                opacity: 0;
-                background-color: #9356DC;
             }
         }
     }
@@ -143,9 +139,16 @@ section {
 }
 
 main {
-    @extend header;
+    @include hidden-body;
+    @include layout;
     background-color: $back-color;
     padding-bottom: 50px;
+
+    h2 {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 5%;
+    }
 
 }
 
@@ -154,20 +157,14 @@ main {
 }
 
 .restaurants {
+
     @include restaurants-cards;
 
-    a {
-        text-decoration: none;
-
-        img {
-            @include images;
-        }
-
-    }
 }
 
 footer {
-    @extend header;
+    @include hidden-body;
+    @include layout;
     align-items: flex-start;
     background: darken($color: $back-color, $amount: 50%);
 
