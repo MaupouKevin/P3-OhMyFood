@@ -211,7 +211,7 @@ section {
   right: -13px;
 }
 .fonctionnement div button {
-  width: 100%;
+  width: 90%;
   height: 85px;
   border-radius: 15px;
   border: none;
@@ -437,7 +437,7 @@ footer ul li {
     align-items: center;
   }
   body section .fonctionnement h2 {
-    width: 100%;
+    width: 90%;
     margin: 25px 0px 25px 25px;
     justify-content: center;
   }
