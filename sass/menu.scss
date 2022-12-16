@@ -1,6 +1,7 @@
 @import "./utils/variables";
 @import "./utils/animations.scss";
 @import "./layout/layout.scss";
+@import "./base/base.scss";
 
 h1 {
     display: flex;
@@ -28,10 +29,6 @@ header {
     .title-logo {
         width: 40%;
         margin: 15px 0px 10px 0px;
-
-        img {
-            @include images;
-        }
 
     }
 

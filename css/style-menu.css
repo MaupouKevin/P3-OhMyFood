@@ -345,6 +345,35 @@ footer ul li a {
   filter: invert(1);
 }
 
+body {
+  font-family: "Roboto";
+}
+
+nav input {
+  font-size: 16px;
+}
+
+.reservation-block h2 {
+  font-size: 30px;
+}
+.reservation-block p {
+  font-size: 20px;
+}
+
+.fonctionnement div p {
+  font-size: 15px;
+}
+.fonctionnement div button {
+  font-size: 15px;
+}
+
+footer ul i {
+  font-size: 18px;
+}
+footer ul li {
+  font-size: 18px;
+}
+
 h1 {
   display: flex;
   justify-content: space-around;
@@ -370,11 +399,6 @@ header {
 header .title-logo {
   width: 40%;
   margin: 15px 0px 10px 0px;
-}
-header .title-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 header .return-button {
   position: relative;
