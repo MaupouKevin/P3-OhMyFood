@@ -146,7 +146,7 @@ section {
   text-align: center;
   margin: 0px;
 }
-.reservation-block button {
+.reservation-block span {
   width: 230px;
   height: 50px;
   font-size: 15px;
@@ -156,12 +156,14 @@ section {
   border-radius: 30px;
   margin: 15px 0px 20px 0px;
 }
-.reservation-block button a {
-  padding: 21px;
+.reservation-block span a {
+  padding: 14px;
   color: white;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
-.reservation-block button:hover {
+.reservation-block span:hover {
   cursor: pointer;
   opacity: 0.6;
   box-shadow: #a5a5a5 0px 10px 8px;
@@ -476,12 +478,12 @@ footer ul li {
     font-size: 24px;
     margin: 15px 0px 15px 0px;
   }
-  body section .reservation-block button {
+  body section .reservation-block span {
     width: 250px;
     margin-bottom: 30px;
     font-size: 18px;
   }
-  body section .reservation-block button a {
+  body section .reservation-block span a {
     padding: 10px;
   }
   body main {

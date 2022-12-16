@@ -31,9 +31,11 @@ $heart-color: linear-gradient(#FF79DA, #9356DC);
     margin: 15px 0px 20px 0px;
 
     a {
-        padding: 21px;
+        padding: 14px;
         color: white;
         text-decoration: none;
+        display: flex;
+        justify-content: center;
     }
 
     &:hover {
