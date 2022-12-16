@@ -1,163 +1,3 @@
-body {
-  font-family: "Roboto";
-  margin: 0px;
-}
-
-@keyframes appear-block {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  20% {
-    opacity: 0.2;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.8;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes heart-animation {
-  0% {
-    transform: scale(0%, 0%);
-    opacity: 1;
-  }
-  25% {
-    transform: scale(35%, 25%);
-  }
-  50% {
-    transform: scale(70%, 50%);
-  }
-  75% {
-    transform: scale(100%, 75%);
-  }
-  100% {
-    transform: scale(100%);
-    opacity: 1;
-  }
-}
-@media all and (min-width: 1024px) {
-  body h2 {
-    font-size: 30px;
-  }
-  body header {
-    padding: 0px 50px;
-  }
-  body header .title-logo {
-    width: 30%;
-  }
-  body nav {
-    padding: 0px 50px;
-  }
-  body section {
-    flex-direction: row;
-  }
-  body section .fonctionnement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  body section .fonctionnement h2 {
-    width: 100%;
-    margin: 25px 0px 25px 25px;
-    justify-content: center;
-  }
-  body section .fonctionnement div {
-    padding-bottom: 20px;
-    width: 80%;
-  }
-  body section .fonctionnement div p {
-    font-size: 20px;
-  }
-  body section .fonctionnement div button {
-    font-size: 20px;
-  }
-  body section .fonctionnement div button i {
-    position: relative;
-    left: 25px;
-  }
-  body section .fonctionnement div button span {
-    position: relative;
-    left: 70px;
-  }
-  body section .reservation-block {
-    border-radius: 25px;
-    margin-left: 10px;
-  }
-  body section .reservation-block .reservation-title {
-    margin-top: 15px;
-  }
-  body section .reservation-block .reservation-title h2 {
-    width: 80%;
-    font-size: 34px;
-    margin-top: 15px;
-  }
-  body section .reservation-block .reservation-text p {
-    width: 70%;
-    font-size: 24px;
-    margin: 15px 0px 15px 0px;
-  }
-  body section .reservation-block button {
-    width: 250px;
-    margin-bottom: 30px;
-    font-size: 18px;
-  }
-  body section .reservation-block button a {
-    padding: 10px;
-  }
-  body main {
-    padding: 0px 50px;
-  }
-  body main h2 {
-    margin: 20px 0px 0px 0px;
-    justify-content: center;
-  }
-  body #restaurants {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  body #restaurants .restaurants {
-    width: 48%;
-  }
-  body #restaurants .restaurants__images {
-    height: 300px;
-  }
-  body #restaurants .restaurants__block h3 {
-    color: black;
-    font-size: 26px;
-    margin: 20px 0px 5px 20px;
-  }
-  body #restaurants .restaurants__block p {
-    color: black;
-    font-size: 24px;
-    margin: 10px 0px 20px 20px;
-  }
-  body #restaurants .restaurants__hearts i {
-    margin: 35px 10px 35px 0px;
-  }
-  body #restaurants .restaurants__hearts i .fa-heart {
-    position: relative;
-    top: -70px;
-  }
-  body footer {
-    padding: 0px 50px;
-    align-items: center;
-  }
-  body footer ul li {
-    margin: 15px 0px;
-    text-align: center;
-    font-size: 22px;
-  }
-}
 .loader {
   position: fixed;
   height: 100%;
@@ -199,6 +39,51 @@ body {
     opacity: 1;
   }
 }
+@keyframes appear-block {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heart-animation {
+  0% {
+    transform: scale(0%, 0%);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(35%, 25%);
+  }
+  50% {
+    transform: scale(70%, 50%);
+  }
+  75% {
+    transform: scale(100%, 75%);
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+body {
+  margin: 0px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -228,7 +113,6 @@ nav {
 }
 nav input {
   width: 150px;
-  font-size: 16px;
   background: #d8d8d8;
   border: none;
   text-align: center;
@@ -256,13 +140,11 @@ section {
 }
 .reservation-block h2 {
   text-align: center;
-  font-size: 30px;
   margin: 0px;
 }
 .reservation-block p {
   text-align: center;
   margin: 0px;
-  font-size: 20px;
 }
 .reservation-block button {
   width: 230px;
@@ -302,6 +184,7 @@ section {
 .fonctionnement {
   animation: hidden-body 1500ms 3s both;
   width: 100%;
+  margin-bottom: 40px;
 }
 .fonctionnement h2 {
   display: flex;
@@ -321,7 +204,6 @@ section {
   align-items: center;
   width: 25px;
   height: 25px;
-  font-size: 15px;
   color: white;
   background-color: #9356DC;
   border-radius: 25px;
@@ -337,7 +219,6 @@ section {
   display: flex;
   background-color: rgb(241, 241, 241);
   font-weight: 600;
-  font-size: medium;
   align-items: center;
 }
 .fonctionnement div button i {
@@ -366,6 +247,7 @@ main {
 main h2 {
   display: flex;
   align-self: flex-start;
+  margin: 35px 0px 10px 0px;
   margin-left: 5%;
 }
 
@@ -482,13 +364,11 @@ footer ul {
 }
 footer ul i {
   color: white;
-  font-size: 18px;
   width: 20px;
   padding-right: 10px;
 }
 footer ul li {
   margin: 8px 0px 8px 0px;
-  font-size: 18px;
 }
 footer ul li a {
   text-decoration: none;
@@ -504,6 +384,150 @@ footer ul li a {
   height: 100%;
   object-fit: cover;
   filter: invert(1);
+}
+
+body {
+  font-family: "Roboto";
+}
+
+nav input {
+  font-size: 16px;
+}
+
+.reservation-block h2 {
+  font-size: 30px;
+}
+.reservation-block p {
+  font-size: 20px;
+}
+
+.fonctionnement div p {
+  font-size: 15px;
+}
+.fonctionnement div button {
+  font-size: 15px;
+}
+
+footer ul i {
+  font-size: 18px;
+}
+footer ul li {
+  font-size: 18px;
+}
+
+@media all and (min-width: 1024px) {
+  body h2 {
+    font-size: 30px;
+  }
+  body header {
+    padding: 0px 50px;
+  }
+  body header .title-logo {
+    width: 30%;
+  }
+  body nav {
+    padding: 0px 50px;
+  }
+  body section {
+    flex-direction: row;
+  }
+  body section .fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body section .fonctionnement h2 {
+    width: 100%;
+    margin: 25px 0px 25px 25px;
+    justify-content: center;
+  }
+  body section .fonctionnement div {
+    padding-bottom: 20px;
+    width: 80%;
+  }
+  body section .fonctionnement div p {
+    font-size: 20px;
+  }
+  body section .fonctionnement div button {
+    font-size: 20px;
+  }
+  body section .fonctionnement div button i {
+    position: relative;
+    left: 25px;
+  }
+  body section .fonctionnement div button span {
+    position: relative;
+    left: 70px;
+  }
+  body section .reservation-block {
+    border-radius: 25px;
+    margin-left: 10px;
+  }
+  body section .reservation-block .reservation-title {
+    margin-top: 15px;
+  }
+  body section .reservation-block .reservation-title h2 {
+    width: 80%;
+    font-size: 34px;
+    margin-top: 15px;
+  }
+  body section .reservation-block .reservation-text p {
+    width: 70%;
+    font-size: 24px;
+    margin: 15px 0px 15px 0px;
+  }
+  body section .reservation-block button {
+    width: 250px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  body section .reservation-block button a {
+    padding: 10px;
+  }
+  body main {
+    padding: 0px 50px;
+  }
+  body main h2 {
+    margin: 20px 0px 0px 0px;
+    justify-content: center;
+  }
+  body #restaurants {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  body #restaurants .restaurants {
+    width: 48%;
+  }
+  body #restaurants .restaurants__images {
+    height: 300px;
+  }
+  body #restaurants .restaurants__block h3 {
+    color: black;
+    font-size: 26px;
+    margin: 20px 0px 5px 20px;
+  }
+  body #restaurants .restaurants__block p {
+    color: black;
+    font-size: 24px;
+    margin: 10px 0px 20px 20px;
+  }
+  body #restaurants .restaurants__hearts i {
+    margin: 35px 10px 35px 0px;
+  }
+  body #restaurants .restaurants__hearts i .fa-heart {
+    position: relative;
+    top: -70px;
+  }
+  body footer {
+    padding: 0px 50px;
+    align-items: center;
+  }
+  body footer ul li {
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 22px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

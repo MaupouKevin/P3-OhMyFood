@@ -1,203 +1,168 @@
 @import "./utils/variables";
 @import "./components/loading-spinner.scss";
+@import "./utils/animations.scss";
+@import "./layout/layout.scss";
+@import "./base/base.scss";
 
-header {
-    @include layout;
-    @include hidden-body;
-}
 
-.title-logo {
-    width: 50%;
-    margin: 15px 0px 10px 0px;
+@media all and (min-width: 1024px) {
 
-    img {
-        @include images;
-    }
-}
+    body {
 
-nav {
-    @include layout;
-    @include hidden-body;
-    height: 50px;
-    flex-direction: row;
-    justify-content: space-around;
-    background: darken($color: $back-color, $amount: 10%);
-
-    input {
-        width: 150px;
-        font-size: 16px;
-        background: darken($color: $back-color, $amount: 10%);
-        border: none;
-        text-align: center;
-
-        &::placeholder {
-            color: black;
-            opacity: 1;
-        }
-    }
-}
-
-section {
-    @include layout;
-    @include hidden-body;
-}
-
-.reservation-block {
-    width: 100%;
-    align-items: center;
-    @include layout;
-    background: $back-color;
-    padding: 20px 0px 20px 0px;
-
-    h2 {
-        text-align: center;
-        font-size: 30px;
-        margin: 0px;
-    }
-
-    p {
-        text-align: center;
-        margin: 0px;
-        font-size: 20px;
-    }
-
-    button {
-        @include btn-purple;
-
-    }
-}
-
-.reservation-title {
-    @include layout;
-    margin: 30px 40px 10px 40px;
-
-}
-
-.reservation-text {
-    @include layout;
-    margin: 10px 20px 10px 20px;
-}
-
-.fonctionnement {
-    animation: hidden-body 1500ms 3s both;
-    width: 100%;
-
-    h2 {
-        display: flex;
-        align-self: flex-start;
-        margin-left: 8%;
-    }
-
-    div {
-        width: 94%;
-        display: flex;
-        align-items: center;
-        padding-bottom: 25px;
-        padding-left: 5px;
-
-        p {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 25px;
-            height: 25px;
-            font-size: 15px;
-            color: white;
-            background-color: #9356DC;
-            border-radius: 25px;
-            position: relative;
-            right: -13px;
-
+        h2 {
+            font-size: 30px;
         }
 
-        button {
-            @include block;
-            font-size: medium;
-            align-items: center;
+        header {
+            @include laptop-layout;
 
-            i {
-                margin: 0px 0px 0px 30px;
+            .title-logo {
+                width: 30%;
+            }
+        }
+
+        nav {
+            @include laptop-layout;
+        }
+
+        section {
+            flex-direction: row;
+
+            .fonctionnement {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    width: 100%;
+                    margin: 25px 0px 25px 25px;
+                    justify-content: center;
+                }
+
+                div {
+                    padding-bottom: 20px;
+                    width: 80%;
+
+                    p {
+                        font-size: 20px;
+                    }
+
+                    button {
+                        font-size: 20px;
+
+                        i {
+                            position: relative;
+                            left: 25px;
+                        }
+
+                        span {
+                            position: relative;
+                            left: 70px;
+                        }
+
+                    }
+                }
             }
 
-            span {
-                margin: 0px 0px 0px 30px;
-            }
 
-            &:hover {
-                cursor: pointer;
-                background-color: lighten($color: #9356DC, $amount: 33%);
+            .reservation-block {
+                border-radius: 25px;
+                margin-left: 10px;
 
-                i {
-                    color: darken($color: #9356DC, $amount: 20%);
-                    margin: 0px 0px 0px 30px
+                .reservation-title {
+
+                    margin-top: 15px;
+
+                    h2 {
+                        width: 80%;
+                        font-size: 34px;
+                        margin-top: 15px;
+                    }
+                }
+
+                .reservation-text {
+
+                    p {
+                        width: 70%;
+                        font-size: 24px;
+                        margin: 15px 0px 15px 0px;
+                    }
+                }
+
+                button {
+                    width: 250px;
+                    margin-bottom: 30px;
+                    font-size: 18px;
+
+                    a {
+                        padding: 10px;
+                    }
                 }
             }
         }
-    }
 
+        main {
 
-}
+            @include laptop-layout;
 
-main {
-    @include hidden-body;
-    @include layout;
-    background-color: $back-color;
-    padding-bottom: 50px;
-
-    h2 {
-        display: flex;
-        align-self: flex-start;
-        margin-left: 5%;
-    }
-
-}
-
-#restaurants {
-    width: 100%;
-}
-
-.restaurants {
-
-    @include restaurants-cards;
-
-}
-
-footer {
-    @include hidden-body;
-    @include layout;
-    align-items: flex-start;
-    background: darken($color: $back-color, $amount: 50%);
-
-    ul {
-        padding: 0px;
-        margin: 20px;
-        list-style: none;
-
-        i {
-            color: white;
-            font-size: 18px;
-            width: 20px;
-            padding-right: 10px;
-        }
-
-        li {
-            margin: 8px 0px 8px 0px;
-            font-size: 18px;
-
-            a {
-                text-decoration: none;
-                color: white;
+            h2 {
+                margin: 20px 0px 0px 0px;
+                justify-content: center;
             }
         }
-    }
-}
 
-.footer-logo {
-    width: 30%;
-    margin: 30px 0px 0px 20px;
+        #restaurants {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
 
-    img {
-        @include images;
-        filter: invert(1);
+            .restaurants {
+                width: 48%;
+
+                &__images {
+                    height: 300px;
+                }
+
+                &__block {
+
+                    h3 {
+                        color: black;
+                        font-size: 26px;
+                        margin: 20px 0px 5px 20px;
+                    }
+
+                    p {
+                        color: black;
+                        font-size: 24px;
+                        margin: 10px 0px 20px 20px;
+                    }
+                }
+
+                &__hearts {
+                    i {
+                        margin: 35px 10px 35px 0px;
+
+                        .fa-heart {
+                            position: relative;
+                            top: -70px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            @include laptop-layout;
+            align-items: center;
+
+            ul {
+                li {
+                    margin: 15px 0px;
+                    text-align: center;
+                    font-size: 22px;
+                }
+            }
+        }
     }
 }

@@ -1,4 +1,6 @@
 @import "./utils/variables";
+@import "./utils/animations.scss";
+@import "./layout/layout.scss";
 
 h1 {
     display: flex;
@@ -19,6 +21,7 @@ h1 {
 header {
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 

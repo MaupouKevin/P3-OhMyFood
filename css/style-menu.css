@@ -1,8 +1,3 @@
-body {
-  font-family: "Roboto";
-  margin: 0px;
-}
-
 @keyframes appear-block {
   0% {
     opacity: 0;
@@ -44,120 +39,312 @@ body {
     opacity: 1;
   }
 }
-@media all and (min-width: 1024px) {
-  body h2 {
-    font-size: 30px;
-  }
-  body header {
-    padding: 0px 50px;
-  }
-  body header .title-logo {
-    width: 30%;
-  }
-  body nav {
-    padding: 0px 50px;
-  }
-  body section {
-    flex-direction: row;
-  }
-  body section .fonctionnement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  body section .fonctionnement h2 {
-    width: 100%;
-    margin: 25px 0px 25px 25px;
-    justify-content: center;
-  }
-  body section .fonctionnement div {
-    padding-bottom: 20px;
-    width: 80%;
-  }
-  body section .fonctionnement div p {
-    font-size: 20px;
-  }
-  body section .fonctionnement div button {
-    font-size: 20px;
-  }
-  body section .fonctionnement div button i {
-    position: relative;
-    left: 25px;
-  }
-  body section .fonctionnement div button span {
-    position: relative;
-    left: 70px;
-  }
-  body section .reservation-block {
-    border-radius: 25px;
-    margin-left: 10px;
-  }
-  body section .reservation-block .reservation-title {
-    margin-top: 15px;
-  }
-  body section .reservation-block .reservation-title h2 {
-    width: 80%;
-    font-size: 34px;
-    margin-top: 15px;
-  }
-  body section .reservation-block .reservation-text p {
-    width: 70%;
-    font-size: 24px;
-    margin: 15px 0px 15px 0px;
-  }
-  body section .reservation-block button {
-    width: 250px;
-    margin-bottom: 30px;
-    font-size: 18px;
-  }
-  body section .reservation-block button a {
-    padding: 10px;
-  }
-  body main {
-    padding: 0px 50px;
-  }
-  body main h2 {
-    margin: 20px 0px 0px 0px;
-    justify-content: center;
-  }
-  body #restaurants {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  body #restaurants .restaurants {
-    width: 48%;
-  }
-  body #restaurants .restaurants__images {
-    height: 300px;
-  }
-  body #restaurants .restaurants__block h3 {
-    color: black;
-    font-size: 26px;
-    margin: 20px 0px 5px 20px;
-  }
-  body #restaurants .restaurants__block p {
-    color: black;
-    font-size: 24px;
-    margin: 10px 0px 20px 20px;
-  }
-  body #restaurants .restaurants__hearts i {
-    margin: 35px 10px 35px 0px;
-  }
-  body #restaurants .restaurants__hearts i .fa-heart {
-    position: relative;
-    top: -70px;
-  }
-  body footer {
-    padding: 0px 50px;
-    align-items: center;
-  }
-  body footer ul li {
-    margin: 15px 0px;
-    text-align: center;
-    font-size: 22px;
-  }
+body {
+  margin: 0px;
 }
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: hidden-body 1500ms 3s both;
+}
+
+.title-logo {
+  width: 50%;
+  margin: 15px 0px 10px 0px;
+}
+.title-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: hidden-body 1500ms 3s both;
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #d8d8d8;
+}
+nav input {
+  width: 150px;
+  background: #d8d8d8;
+  border: none;
+  text-align: center;
+}
+nav input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: hidden-body 1500ms 3s both;
+}
+
+.reservation-block {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(241, 241, 241);
+  padding: 20px 0px 20px 0px;
+}
+.reservation-block h2 {
+  text-align: center;
+  margin: 0px;
+}
+.reservation-block p {
+  text-align: center;
+  margin: 0px;
+}
+.reservation-block button {
+  width: 230px;
+  height: 50px;
+  font-size: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: #a5a5a5 0px 5px 5px;
+  border: none;
+  border-radius: 30px;
+  margin: 15px 0px 20px 0px;
+}
+.reservation-block button a {
+  padding: 21px;
+  color: white;
+  text-decoration: none;
+}
+.reservation-block button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  box-shadow: #a5a5a5 0px 10px 8px;
+}
+
+.reservation-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 40px 10px 40px;
+}
+
+.reservation-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 20px 10px 20px;
+}
+
+.fonctionnement {
+  animation: hidden-body 1500ms 3s both;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.fonctionnement h2 {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 8%;
+}
+.fonctionnement div {
+  width: 94%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+  padding-left: 5px;
+}
+.fonctionnement div p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 25px;
+  position: relative;
+  right: -13px;
+}
+.fonctionnement div button {
+  width: 100%;
+  height: 85px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: #d8d8d8 6px 6px 10px;
+  display: flex;
+  background-color: rgb(241, 241, 241);
+  font-weight: 600;
+  align-items: center;
+}
+.fonctionnement div button i {
+  margin: 0px 0px 0px 30px;
+}
+.fonctionnement div button span {
+  margin: 0px 0px 0px 30px;
+}
+.fonctionnement div button:hover {
+  cursor: pointer;
+  background-color: #ece1f9;
+}
+.fonctionnement div button:hover i {
+  color: #6023a9;
+  margin: 0px 0px 0px 30px;
+}
+
+main {
+  animation: hidden-body 1500ms 3s both;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(241, 241, 241);
+  padding-bottom: 50px;
+}
+main h2 {
+  display: flex;
+  align-self: flex-start;
+  margin: 35px 0px 10px 0px;
+  margin-left: 5%;
+}
+
+#restaurants {
+  width: 100%;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: #cbcbcb 6px 6px 10px;
+  width: 90%;
+  margin: 20px 0px 20px 0px;
+}
+.restaurants .new {
+  display: flex;
+  height: 0px;
+}
+.restaurants .new p {
+  width: 25%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border: 2px #99E2D0 solid;
+  border-radius: 3px;
+  position: relative;
+  left: 70%;
+  color: #278870;
+  font-weight: 700;
+  font-size: 17px;
+}
+.restaurants a {
+  text-decoration: none;
+}
+.restaurants a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.restaurants__images {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  height: 200px;
+  width: 100%;
+}
+.restaurants__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
+}
+.restaurants__texts h3 {
+  color: black;
+  font-size: 22px;
+  margin: 15px 0px 5px 15px;
+}
+.restaurants__texts p {
+  color: black;
+  font-size: 20px;
+  margin: 5px 0px 15px 15px;
+}
+.restaurants__hearts {
+  display: flex;
+  align-self: flex-end;
+  align-items: flex-end;
+  height: 0px;
+  width: 35px;
+  margin: 0px 15px 0px 0px;
+}
+.restaurants__hearts i {
+  height: 35px;
+  margin: 25px 0px;
+  color: black;
+  font-size: 35px;
+  font-weight: 100;
+}
+.restaurants__hearts i:hover .fa-heart {
+  animation: heart-animation 1500ms linear;
+  animation-fill-mode: both;
+}
+.restaurants__hearts i .fa-heart {
+  position: relative;
+  top: -60px;
+  opacity: 0;
+  transform-origin: 50% 100%;
+  height: 35px;
+  background: -moz-linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+footer {
+  animation: hidden-body 1500ms 3s both;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #727272;
+}
+footer ul {
+  padding: 0px;
+  margin: 20px;
+  list-style: none;
+}
+footer ul i {
+  color: white;
+  width: 20px;
+  padding-right: 10px;
+}
+footer ul li {
+  margin: 8px 0px 8px 0px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-logo {
+  width: 30%;
+  margin: 30px 0px 0px 20px;
+}
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: invert(1);
+}
+
 h1 {
   display: flex;
   justify-content: space-around;
@@ -176,6 +363,7 @@ h1 .fa-solid {
 header {
   width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
