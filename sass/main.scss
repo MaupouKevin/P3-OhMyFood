@@ -7,7 +7,7 @@ header {
 }
 
 .title-logo {
-    width: 45%;
+    width: 50%;
     margin: 15px 0px 10px 0px;
 
     img {
@@ -101,7 +101,7 @@ section {
             align-items: center;
             width: 25px;
             height: 25px;
-            font-size: medium;
+            font-size: 15px;
             color: white;
             background-color: #9356DC;
             border-radius: 25px;
@@ -125,7 +125,7 @@ section {
 
             &:hover {
                 cursor: pointer;
-                background-color: lighten($color: #9356DC, $amount: 20%);
+                background-color: lighten($color: #9356DC, $amount: 33%);
 
                 i {
                     color: darken($color: #9356DC, $amount: 20%);

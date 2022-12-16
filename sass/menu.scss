@@ -11,7 +11,7 @@ h1 {
     .fa-solid {
         display: flex;
         align-items: center;
-        font-size: 30px;
+        font-size: 34px;
         font-weight: 100;
     }
 }
@@ -70,6 +70,33 @@ main {
     bottom: 50px;
     padding: 0px 20px 0px 20px;
 
+    h1 {
+        i {
+            &:hover {
+                .anim-heart {
+                    animation: heart-animation 1500ms linear;
+                    animation-fill-mode: both;
+                }
+            }
+
+            .anim-heart {
+                position: relative;
+                left: -34px;
+                opacity: 0;
+                transform-origin: 50% 100%;
+                height: 35px;
+                background: -moz-linear-gradient(#FF79DA, #9356DC);
+                background: -webkit-linear-gradient(#FF79DA, #9356DC);
+                background: linear-gradient(#FF79DA, #9356DC);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+            }
+        }
+    }
+
     .starters {
         @include block-dishes;
 
@@ -88,12 +115,13 @@ main {
 
     .desserts {
         @include block-dishes;
-        
+
         h2 {
             animation: appear-block 800ms 1800ms both;
         }
     }
 }
+
 
 .block {
     @include block;
@@ -101,39 +129,13 @@ main {
     height: fit-content;
     margin-top: 15px;
     animation: appear-block 800ms 200ms both;
-
-    .check {
-        transition: transform 500ms linear;
-        width: 20%;
-        i {
-            transition: transform 500ms linear;
-        }
-    }
-
-    &:active {
-
-        &>.check {
-            transform: scaleX(1);
-
-            & > i {
-                transform: rotate(360deg);
-            }
-        }
-
-        & > .block-title {
-            animation: animation-ellipsis 500ms linear both;
-        }
-
-        & > .price {
-            animation: animation-price 500ms linear both paused;      
-        }
-
-    }
-
+    
     .block-title {
         width: calc(80%);
         display: flex;
         flex-direction: column;
+        transition: width 800ms ;
+        
 
         h3 {
             @include text-block;
@@ -151,19 +153,23 @@ main {
     }
 
     .price {
+        transition: transform 800ms;
+        transform: translateX(0%);
         width: calc(15%);
         display: flex;
         align-items: flex-end;
         padding-bottom: 15px;
         justify-content: flex-end;
+        
 
         span {
             display: flex;
         }
     }
 
-
     .check {
+        transition: transform 500ms linear;
+        width: 20%;
         transform: scaleX(0);
         transform-origin: 100% 0%;
         height: 85px;
@@ -179,14 +185,34 @@ main {
         i {
             color: white;
             font-size: 30px;
+            transition: transform 500ms linear;
         }
     }
 
+    &:active {
+
+        &>.check {
+            transform: scaleX(1);
+
+            &>i {
+                transform: rotate(360deg);
+            }
+        }
+
+        &>.block-title {
+            width: calc(60%);
+
+        }
+
+        &>.price {
+            transform: translateX(-20%);
+        }
+    }
 }
 
 @for $i from 2 through 10 {
     .block#{$i} {
-        animation-delay: (200ms+200ms*$i) ;
+        animation-delay: (200ms+200ms*$i);
     }
 }
 
@@ -236,5 +262,105 @@ footer {
     img {
         @include images;
         filter: invert(1);
+    }
+}
+
+@media all and (min-width: 1024px) {
+    body {
+        header {
+            padding: 0px;
+
+            .title-logo {
+                width: 35%
+            }
+
+            .return-button {
+                position: relative;
+                left: -30%;
+
+                a {
+                    text-decoration: none;
+                }
+
+                i {
+                    font-size: 28px;
+                }
+
+            }
+
+        }
+
+        main {
+            padding: 0px;
+
+            .restaurant-picture {
+                height: 500px;
+            }
+
+            .restaurant-block {
+                @include laptop-menu-layout;
+
+                h1 {
+                    width: 100%;
+                    justify-content: center;
+                    font-size: 34px;
+
+                    .fa-solid {
+                        margin: 0px 30px;
+
+                        .anim-heart {
+                            left: -64px;
+                        }
+                    }
+
+                }
+
+                .starters {
+                    width: 33%;
+                    align-items: flex-start;
+
+                    .block {
+                        width: 90%;
+                    }
+                }
+
+                .main-courses {
+                    width: 33%;
+                    align-items: flex-start;
+
+                    .block {
+                        width: 90%;
+                    }
+                }
+
+                .desserts {
+                    width: 33%;
+                    align-items: flex-start;
+
+                    .block {
+                        width: 90%;
+                    }
+                }
+            }
+
+            .order-button {
+                padding: 0px 0px 30px 0px;
+            }
+        }
+
+        footer {
+            @include laptop-layout;
+            align-items: center;
+
+            ul {
+                li {
+                    margin: 15px 0px;
+                    text-align: center;
+                    font-size: 22px;
+                }
+            }
+        }
+
+
     }
 }

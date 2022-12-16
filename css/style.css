@@ -3,22 +3,6 @@ body {
   margin: 0px;
 }
 
-@keyframes animation-price {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-20%);
-  }
-}
-@keyframes animation-ellipsis {
-  0% {
-    width: 80%;
-  }
-  100% {
-    width: 60%;
-  }
-}
 @keyframes appear-block {
   0% {
     opacity: 0;
@@ -61,44 +45,117 @@ body {
   }
 }
 @media all and (min-width: 1024px) {
-  header {
+  body h2 {
+    font-size: 30px;
+  }
+  body header {
     padding: 0px 50px;
   }
-  nav {
+  body header .title-logo {
+    width: 30%;
+  }
+  body nav {
     padding: 0px 50px;
   }
-  section {
-    flex-direction: row !important;
+  body section {
+    flex-direction: row;
   }
-  #restaurants {
+  body section .fonctionnement {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  body section .fonctionnement h2 {
+    width: 100%;
+    margin: 25px 0px 25px 25px;
+    justify-content: center;
+  }
+  body section .fonctionnement div {
+    padding-bottom: 20px;
+    width: 80%;
+  }
+  body section .fonctionnement div p {
+    font-size: 20px;
+  }
+  body section .fonctionnement div button {
+    font-size: 20px;
+  }
+  body section .fonctionnement div button i {
+    position: relative;
+    left: 25px;
+  }
+  body section .fonctionnement div button span {
+    position: relative;
+    left: 70px;
+  }
+  body section .reservation-block {
+    border-radius: 25px;
+    margin-left: 10px;
+  }
+  body section .reservation-block .reservation-title {
+    margin-top: 15px;
+  }
+  body section .reservation-block .reservation-title h2 {
+    width: 80%;
+    font-size: 34px;
+    margin-top: 15px;
+  }
+  body section .reservation-block .reservation-text p {
+    width: 70%;
+    font-size: 24px;
+    margin: 15px 0px 15px 0px;
+  }
+  body section .reservation-block button {
+    width: 250px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  body section .reservation-block button a {
+    padding: 10px;
+  }
+  body main {
+    padding: 0px 50px;
+  }
+  body main h2 {
+    margin: 20px 0px 0px 0px;
+    justify-content: center;
+  }
+  body #restaurants {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
-  #restaurants .restaurants {
-    width: 45%;
+  body #restaurants .restaurants {
+    width: 48%;
   }
-  #restaurants .restaurants__images {
+  body #restaurants .restaurants__images {
     height: 300px;
   }
-  #restaurants .restaurants__block h3 {
+  body #restaurants .restaurants__block h3 {
     color: black;
     font-size: 26px;
     margin: 20px 0px 5px 20px;
   }
-  #restaurants .restaurants__block p {
+  body #restaurants .restaurants__block p {
     color: black;
     font-size: 24px;
     margin: 10px 0px 20px 20px;
   }
-  #restaurants .restaurants__hearts i {
+  body #restaurants .restaurants__hearts i {
     margin: 35px 10px 35px 0px;
   }
-  main {
-    padding: 0px 50px;
+  body #restaurants .restaurants__hearts i .fa-heart {
+    position: relative;
+    top: -70px;
   }
-  footer {
+  body footer {
     padding: 0px 50px;
+    align-items: center;
+  }
+  body footer ul li {
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 22px;
   }
 }
 .loader {
@@ -150,7 +207,7 @@ header {
 }
 
 .title-logo {
-  width: 45%;
+  width: 50%;
   margin: 15px 0px 10px 0px;
 }
 .title-logo img {
@@ -264,7 +321,7 @@ section {
   align-items: center;
   width: 25px;
   height: 25px;
-  font-size: medium;
+  font-size: 15px;
   color: white;
   background-color: #9356DC;
   border-radius: 25px;
@@ -291,7 +348,7 @@ section {
 }
 .fonctionnement div button:hover {
   cursor: pointer;
-  background-color: #c9abee;
+  background-color: #ece1f9;
 }
 .fonctionnement div button:hover i {
   color: #6023a9;

@@ -66,29 +66,6 @@ body {
 
 }
 
-@keyframes animation-price {
-    0% {
-        transform: translateX(0%);
-
-    }
-
-    100% {
-        transform: translateX(-20%);
-
-    }
-
-}
-
-@keyframes animation-ellipsis {
-    0% {
-        width: calc(80%);
-    }
-
-    100% {
-        width: calc(60%);
-    }
-}
-
 
 @keyframes appear-block {
     0% {
@@ -248,9 +225,6 @@ body {
     }
 }
 
-
-
-
 @keyframes heart-animation {
 
     0% {
@@ -282,59 +256,172 @@ body {
 @mixin laptop-layout {
     padding: 0px 50px;
 }
+
+@mixin laptop-menu-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
 @media all and (min-width: 1024px) {
-    header {
-        @include laptop-layout;
-    }
-    
-    nav {
-        @include laptop-layout;
-    }
-    
-    section {
-        flex-direction: row !important;
-    }
 
-    #restaurants {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+    body {
 
-        .restaurants {
-            width: 45%;
+        h2 {
+            font-size: 30px;
+        }
 
-            &__images {
-                height: 300px;
+        header {
+            @include laptop-layout;
+
+            .title-logo {
+                width: 30%;
             }
-            
-            &__block {
+        }
 
-                h3 {
-                    color: black;
-                    font-size: 26px;
-                    margin: 20px 0px 5px 20px;
+        nav {
+            @include laptop-layout;
+        }
+
+        section {
+            flex-direction: row;
+
+            .fonctionnement {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    width: 100%;
+                    margin: 25px 0px 25px 25px;
+                    justify-content: center;
                 }
-        
-                p {
-                    color: black;
-                    font-size: 24px;
-                    margin: 10px 0px 20px 20px;
+
+                div {
+                    padding-bottom: 20px;
+                    width: 80%;
+
+                    p {
+                        font-size: 20px;
+                    }
+
+                    button {
+                        font-size: 20px;
+
+                        i {
+                            position: relative;
+                            left: 25px;
+                        }
+
+                        span {
+                            position: relative;
+                            left: 70px;
+                        }
+
+                    }
                 }
             }
 
-            &__hearts {
-                i {
-                    margin: 35px 10px 35px 0px;
+
+            .reservation-block {
+                border-radius: 25px;
+                margin-left: 10px;
+
+                .reservation-title {
+
+                    margin-top: 15px;
+
+                    h2 {
+                        width: 80%;
+                        font-size: 34px;
+                        margin-top: 15px;
+                    }
+                }
+
+                .reservation-text {
+
+                    p {
+                        width: 70%;
+                        font-size: 24px;
+                        margin: 15px 0px 15px 0px;
+                    }
+                }
+
+                button {
+                    width: 250px;
+                    margin-bottom: 30px;
+                    font-size: 18px;
+
+                    a {
+                        padding: 10px;
+                    }
                 }
             }
         }
-    }
 
-    main {
-        @include laptop-layout;
-    }
+        main {
 
-    footer {
-        @include laptop-layout;
+            @include laptop-layout;
+
+            h2 {
+                margin: 20px 0px 0px 0px;
+                justify-content: center;
+            }
+        }
+
+        #restaurants {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .restaurants {
+                width: 48%;
+
+                &__images {
+                    height: 300px;
+                }
+
+                &__block {
+
+                    h3 {
+                        color: black;
+                        font-size: 26px;
+                        margin: 20px 0px 5px 20px;
+                    }
+
+                    p {
+                        color: black;
+                        font-size: 24px;
+                        margin: 10px 0px 20px 20px;
+                    }
+                }
+
+                &__hearts {
+                    i {
+                        margin: 35px 10px 35px 0px;
+
+                        .fa-heart {
+                            position: relative;
+                            top: -70px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            @include laptop-layout;
+            align-items: center;
+
+            ul {
+                li {
+                    margin: 15px 0px;
+                    text-align: center;
+                    font-size: 22px;
+                }
+            }
+        }
     }
 }
