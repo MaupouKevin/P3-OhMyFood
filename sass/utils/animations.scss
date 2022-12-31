@@ -29,27 +29,27 @@
 @keyframes heart-animation {
 
     0% {
-        transform: scale(0%, 0%);
+        transform: scale(0, 0);
         opacity: 1;
     }
 
     25% {
-        transform: scale(35%, 25%);
+        transform: scale(0.35, 0.25);
 
     }
 
     50% {
-        transform: scale(70%, 50%);
+        transform: scale(0.7, 0.5);
 
     }
 
     75% {
-        transform: scale(100%, 75%);
+        transform: scale(1, 0.75);
 
     }
 
     100% {
-        transform: scale(100%);
+        transform: scale(1);
         opacity: 1;
     }
 }

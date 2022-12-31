@@ -15,7 +15,6 @@ $heart-color: linear-gradient(#FF79DA, #9356DC);
 
 @mixin images {
     width: 100%;
-    height: 100%;
     object-fit: cover;
 
 }
@@ -173,7 +172,7 @@ $heart-color: linear-gradient(#FF79DA, #9356DC);
 
             &:hover {
                 .fa-heart {
-                    animation: heart-animation 1500ms linear;
+                    animation: heart-animation 1000ms linear;
                     animation-fill-mode: both;
                 }
             }

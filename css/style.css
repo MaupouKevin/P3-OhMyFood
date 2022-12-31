@@ -63,20 +63,20 @@
 }
 @keyframes heart-animation {
   0% {
-    transform: scale(0%, 0%);
+    transform: scale(0, 0);
     opacity: 1;
   }
   25% {
-    transform: scale(35%, 25%);
+    transform: scale(0.35, 0.25);
   }
   50% {
-    transform: scale(70%, 50%);
+    transform: scale(0.7, 0.5);
   }
   75% {
-    transform: scale(100%, 75%);
+    transform: scale(1, 0.75);
   }
   100% {
-    transform: scale(100%);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -197,6 +197,7 @@ section {
   width: 94%;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-bottom: 25px;
   padding-left: 5px;
 }
@@ -332,7 +333,7 @@ main h2 {
   font-weight: 100;
 }
 .restaurants__hearts i:hover .fa-heart {
-  animation: heart-animation 1500ms linear;
+  animation: heart-animation 1000ms linear;
   animation-fill-mode: both;
 }
 .restaurants__hearts i .fa-heart {
@@ -437,6 +438,7 @@ footer ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 50px;
   }
   body section .fonctionnement h2 {
     width: 90%;
@@ -445,7 +447,7 @@ footer ul li {
   }
   body section .fonctionnement div {
     padding-bottom: 20px;
-    width: 80%;
+    width: 100%;
   }
   body section .fonctionnement div p {
     font-size: 20px;
@@ -529,6 +531,17 @@ footer ul li {
     margin: 15px 0px;
     text-align: center;
     font-size: 22px;
+  }
+}
+@media all and (min-width: 1440px) {
+  body section {
+    padding: 0px 100px;
+  }
+  body main {
+    padding: 20px 100px 50px 100px;
+  }
+  body main #restaurants {
+    padding-top: 20px;
   }
 }
 

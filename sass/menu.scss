@@ -77,7 +77,7 @@ main {
         i {
             &:hover {
                 .anim-heart {
-                    animation: heart-animation 1500ms linear;
+                    animation: heart-animation 1000ms linear;
                     animation-fill-mode: both;
                 }
             }

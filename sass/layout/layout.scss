@@ -75,6 +75,7 @@ section {
     @include layout;
     margin: 10px 20px 10px 20px;
 }
+
 .fonctionnement {
     animation: hidden-body 1500ms 3s both;
     width: 100%;
@@ -90,6 +91,7 @@ section {
         width: 94%;
         display: flex;
         align-items: center;
+        justify-content: center;
         padding-bottom: 25px;
         padding-left: 5px;
 
