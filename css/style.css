@@ -246,6 +246,7 @@ main {
   background-color: rgb(241, 241, 241);
   padding-bottom: 50px;
 }
+
 main h2 {
   display: flex;
   align-self: flex-start;
@@ -260,7 +261,7 @@ main h2 {
 #restaurants h2 {
   width: 100%;
   justify-content: flex-start;
-  margin: 0px 0px 20px 0px;
+  margin: 30px 0px 15px 20px;
 }
 
 .restaurants {
@@ -504,6 +505,11 @@ footer ul li {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+  body #restaurants h2 {
+    margin: 10px 0px 20px 0px;
+  }
+
   body #restaurants .restaurants {
     width: 48%;
   }
