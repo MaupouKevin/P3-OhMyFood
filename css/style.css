@@ -257,6 +257,12 @@ main h2 {
   width: 100%;
 }
 
+#restaurants h2 {
+  width: 100%;
+  justify-content: flex-start;
+  margin: 0px 0px 20px 0px;
+}
+
 .restaurants {
   display: flex;
   flex-direction: column;
