@@ -51,6 +51,7 @@ header {
 
     img {
         @include images;
+        height: 100%;
         position: relative;
         bottom: 0px;
     }
@@ -190,6 +191,10 @@ main {
             font-size: 30px;
             transition: transform 500ms linear;
         }
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 
     &:active {
