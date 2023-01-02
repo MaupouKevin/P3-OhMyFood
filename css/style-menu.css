@@ -527,10 +527,9 @@ main {
   display: flex;
   background-color: rgb(241, 241, 241);
   font-weight: 600;
-  align-self: center;
   background-color: white;
   height: fit-content;
-  margin-top: 15px;
+  margin: 15px 0px 0px 20px;
   animation: appear-block 800ms 200ms both;
 }
 .block .block-title {

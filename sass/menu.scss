@@ -129,10 +129,9 @@ main {
 
 .block {
     @include block;
-    align-self: center;
     background-color: white;
     height: fit-content;
-    margin-top: 15px;
+    margin: 15px 0px 0px 20px;
     animation: appear-block 800ms 200ms both;
 
     .block-title {
