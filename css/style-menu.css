@@ -527,6 +527,7 @@ main {
   display: flex;
   background-color: rgb(241, 241, 241);
   font-weight: 600;
+  align-self: center;
   background-color: white;
   height: fit-content;
   margin-top: 15px;
